@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS `aria`;
+
+CREATE DATABASE `aria` DEFAULT CHARACTER SET utf8;
+
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON `aria`.*
+TO user_aria@'%'
+IDENTIFIED BY 'user_pw';
+
+GRANT SELECT,INSERT,UPDATE,DELETE
+ON `aria`.*
+TO user_aria@'localhost'
+IDENTIFIED BY 'user_pw';
